@@ -1,14 +1,15 @@
 <section class="container-fluid p-5 bg-light">
 	<div class="d-flex align-items-center">
 		<h1 class="fs-6 mb-0 me-auto">Katalog</h1>
-		<a href="#" class="btn btn-sm btn-primary rounded-pill">Realme</a>
+		<?php foreach($brandCollection as $brand): ?>
+		<a href="#" class="btn btn-sm px-3 btn-primary rounded-pill ms-2"><?= $brand -> nama ?></a>
+		<?php endforeach; ?>
 	</div>
 	<hr>
 	<div class="row">
 		<?php foreach($produkCollection as $produk): ?>
 		<a class="col-md-2 text-dark text-decoration-none mb-4 card-item d-flex align-items-stretch"
-			href="<?= base_url(). 'index.php/beli/lihat/' . $produk -> id_produk; ?>"
-			title="Beli <?= $produk -> nama; ?> ">
+			href="<?= base_url(). 'toko/detail/' . $produk -> id_produk; ?>" title="<?= $produk -> nama; ?> ">
 			<div class="col-12 card p-3 shadow-sm border-0">
 				<img src="<?= base_url() . 'assets/images/products/'. $produk -> gambar; ?>"
 					class="card-img-top card-item-img">
@@ -20,8 +21,16 @@
 						<?= "IDR " . number_format($produk -> harga,0,',','.'); ?>
 					</small>
 				</div>
-				<div class="btn btn-primary">
-					Beli
+				<div class="d-flex">
+					<div class="btn btn-sm border-primary text-primary col me-2">
+						Lihat
+					</div>
+					<form action="#" class="ms-auto">
+						<input type="hidden" name="id_produk" value="<?= $produk -> id_produk; ?>">
+						<button type="submit" class="btn btn-sm btn-primary" title="Simpan ke Keranjang 🤗">
+							<i class="bi bi-cart4"></i>
+						</button>
+					</form>
 				</div>
 			</div>
 		</a>

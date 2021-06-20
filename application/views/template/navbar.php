@@ -8,11 +8,16 @@
 			</button>
 		</form>
 		<nav class="ms-auto d-flex justify-content-center align-items-center px-5">
-			<a href="<?=base_url('index.php/masuk');?>"
-				class="small px-3 py-1 border border-white rounded text-white fw-bold text-uppercase text-decoration-none me-2">
-				Masuk
+			<a href="<?=base_url('toko/keranjang');?>"
+				class="px-3 py-1 text-white text-uppercase text-decoration-none me-5">
+				<i class="bi bi-cart4 fs-5"></i>
+				<small class="small badge bg-danger">1</small>
 			</a>
-			<a href="<?=base_url('index.php/daftar');?>"
+			<button type="button" data-bs-toggle="modal" data-bs-target="#masuk"
+				class="btn btn-sm shadow-none px-3 py-1 border border-white rounded text-white fw-bold text-uppercase text-decoration-none me-2">
+				Masuk
+			</button>
+			<a href="<?=base_url('toko/daftar');?>"
 				class="small px-3 py-1 border border-white rounded bg-white text-dark fw-bold text-uppercase text-decoration-none">
 				Daftar
 			</a>
