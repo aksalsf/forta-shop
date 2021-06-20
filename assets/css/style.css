@@ -1,8 +1,10 @@
 body {
 	font-family: "Poppins", sans-serif;
 }
-.banner-hero {
-	height: 560px;
+.banner-image {
+	height: 460px;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 .color-primary {
 	color: #23286b;

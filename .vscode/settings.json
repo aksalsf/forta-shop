@@ -1,0 +1,12 @@
+{
+	"files.exclude": {
+		"**/.vscode": true,
+		"**/cache": true,
+		"**/core": true,
+		"**/hooks": true,
+		"**/language": true,
+		"**/logs": true,
+		"**/system": true,
+		"**/third_party": true
+	}
+}
