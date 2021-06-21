@@ -7,12 +7,10 @@
 				<div class="mb-3">
 					<label for="surel" class="fw-bold mb-1">Surel</label>
 					<input type="text" name="surel" class="form-control shadow-none" required>
-					<?= form_error('surel') ?>
 				</div>
 				<div class="mb-3">
 					<label for="password" class="fw-bold mb-1">Kata Sandi</label>
 					<input type="password" name="kata_sandi" class="form-control shadow-none" required>
-					<?= form_error('kata_sandi') ?>
 				</div>
 				<small class="form-text">
 					Belum punya akun?

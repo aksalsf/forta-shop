@@ -25,8 +25,10 @@
 					<div class="btn btn-sm border-primary text-primary col me-2">
 						Lihat
 					</div>
-					<form action="#" class="ms-auto">
+					<form action="<?= base_url('toko/keranjang/tambah') ?>" method="POST" class="ms-auto">
 						<input type="hidden" name="id_produk" value="<?= $produk -> id_produk; ?>">
+						<input type="hidden" name="nama" value="<?= $produk -> nama; ?>">
+						<input type="hidden" name="harga" value="<?= $produk -> harga; ?>">
 						<button type="submit" class="btn btn-sm btn-primary" title="Simpan ke Keranjang 🤗">
 							<i class="bi bi-cart4"></i>
 						</button>

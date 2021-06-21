@@ -52,3 +52,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $route['default_controller'] = 'toko';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = false;
+
+// Custom Route
+$route['toko/keranjang/(:any)'] = 'toko/$1_keranjang';
+$route['toko/proses/(:any)'] = 'toko/proses_$1';

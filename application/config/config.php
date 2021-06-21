@@ -23,7 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
  */
-$config['base_url'] = 'http://aksal.id/kuliah/pemweb-lanjut/uas/';
+$config['base_url'] = 'http://localhost/kuliah/pemweb-lanjut/uas/';
 
 /*
 |--------------------------------------------------------------------------
@@ -521,3 +521,6 @@ $config['rewrite_short_tags'] = false;
 | Array:        array('10.0.1.200', '192.168.5.0/24')
  */
 $config['proxy_ips'] = '';
+
+// Custom
+date_default_timezone_set("Asia/Jakarta");

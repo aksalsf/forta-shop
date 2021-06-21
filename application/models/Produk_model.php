@@ -16,6 +16,14 @@ class Produk_model extends CI_Model {
         return $query->row();
     }
 
+    public function lihat($selected, $keyname, $key)
+    {
+        $this->db->select($selected);
+        $this->db->from($this->table);
+        $this->db->where($keyname, $key);
+        return $this->db->get()->row();
+    }
+
 }
 
 ?>

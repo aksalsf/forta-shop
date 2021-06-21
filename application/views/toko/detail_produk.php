@@ -39,18 +39,24 @@
 						<?= "IDR " . number_format($produk -> harga,0,',','.'); ?>
 					</h2>
 					<hr>
-					<div class="d-flex">
-						<form action="#" class="col me-2">
-							<input type="hidden" name="id_produk" value="<?= $produk -> id_produk ?>">
-							<button type="submit" class="shadow-none btn border-primary text-primary w-100"
-								<?php if($stok == 'Habis') echo 'disabled'; ?>>
+					<div class="d-flex flex-column">
+						<form action="<?= base_url('toko/keranjang/beli') ?>" class="d-flex mb-2" method="POST">
+							<input type="hidden" name="id_produk" value="<?= $produk -> id_produk; ?>">
+							<input type="hidden" name="nama" value="<?= $produk -> nama; ?>">
+							<input type="hidden" name="harga" value="<?= $produk -> harga; ?>">
+							<input type="number" name="qty" class="form-control me-2 shadow-none" min=" 1" value="1"
+								required>
+							<button type="submit" class="shadow-none btn border-primary text-primary col-7"
+								title="Beli produk ini sekarang!" <?php if($stok == 'Habis') echo 'disabled'; ?>>
 								Beli
 							</button>
 						</form>
-						<form action="#">
-							<input type="hidden" name="id_produk" value="<?= $produk -> id_produk ?>">
-							<button type="submit" class="shadow-none btn btn-primary"
-								<?php if($stok == 'Habis') echo 'disabled'; ?>>
+						<form action="<?= base_url('toko/keranjang/simpan') ?>" method="POST">
+							<input type="hidden" name="id_produk" value="<?= $produk -> id_produk; ?>">
+							<input type="hidden" name="nama" value="<?= $produk -> nama; ?>">
+							<input type="hidden" name="harga" value="<?= $produk -> harga; ?>">
+							<button type="submit" class="shadow-none btn btn-primary w-100"
+								<?php if($stok == 'Habis') echo 'disabled'; ?> title="Simpan ke keranjang!">
 								<i class="bi bi-cart4"></i>
 							</button>
 						</form>

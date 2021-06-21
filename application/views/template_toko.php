@@ -8,7 +8,7 @@ $this->load->view('template/header');
 
 // Notifikasi
 if ($this->session->flashdata('notifikasi')) {
-	$this->load->view('toko/notifikasi');
+	$this->load->view('template/notifikasi');
 }
 
 ?>
@@ -67,5 +67,5 @@ if ($this->session->flashdata('notifikasi')) {
 		&copy;2021 Forta
 	</div>
 </footer>
-
+<?php if($this->session->userdata('pelanggan') === null) { $this->load->view('toko/form_masuk'); }?>
 <?php $this->load->view('template/footer');
