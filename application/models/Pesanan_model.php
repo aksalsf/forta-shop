@@ -30,11 +30,27 @@ class Pesanan_model extends CI_Model {
         return $query->result();
     }
 
-    function baru($data){
+    public function baru($data){
         $this->db->insert($this->table, $data);
         $id = $this->db->insert_id();
         // Mengembalikan id dari data yang baru saja dimasukkan
         return $id;
+    }
+
+    public function lihat_semua_riwayat()
+    {
+        $this->db->select('tb_pesanan.id_pesanan, tb_pesanan.kode_pesanan, tb_pelanggan.nama, tb_pesanan.tgl_pesan,
+        tb_pesanan.status');
+        $this->db->from($this->table);
+        $this->db->join('tb_pelanggan', 'tb_pelanggan.id_pelanggan = '.$this->table.'.id_pelanggan');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function ubah_status($id_pesanan, $status)
+    {
+        $this->db->where('id_pesanan', $id_pesanan);
+        return $this->db->update($this->table, ['status' => $status]);
     }
 
 

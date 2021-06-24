@@ -21,7 +21,7 @@ class Detail_pesanan_model extends CI_Model {
         $query = $this->db->get_where($this->table, ['id_pesanan' => $id]);
         return $query->result();
     }
-
+    
     public function lihat($selected, $keyname, $key)
     {
         $this->db->select($selected);

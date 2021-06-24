@@ -17,7 +17,7 @@
 			<thead>
 				<tr>
 					<th scope="col">Produk</th>
-					<th scope="col">Harga</th>
+					<th scope="col" class="text-start">Harga</th>
 					<th scope="col">Kuantitas</th>
 					<th scope="col" class="text-end">Total</th>
 				</tr>
@@ -29,8 +29,8 @@
 					<td class="col-5 py-5" style="vertical-align:middle">
 						<?= $detail['nama'] ?>
 					</td>
-					<td class="col-3 py-5" style="vertical-align:middle">
-						<?= $detail['harga'] ?>
+					<td class="col-3 py-5 text-start" style="vertical-align:middle">
+						<?= 'Rp ' . $this->cart->format_number($detail['harga']); ?>
 					</td>
 					<td class="py-5" style="vertical-align:middle">
 						<?= $detail['kuantitas'] ?>

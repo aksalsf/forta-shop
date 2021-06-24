@@ -40,6 +40,7 @@
 					</h2>
 					<hr>
 					<div class="d-flex flex-column">
+						<!-- Beli -->
 						<form action="<?= base_url('toko/keranjang/beli') ?>" class="d-flex mb-2" method="POST">
 							<input type="hidden" name="id_produk" value="<?= $produk -> id_produk; ?>">
 							<input type="hidden" name="nama" value="<?= $produk -> nama; ?>">
@@ -51,7 +52,8 @@
 								Beli
 							</button>
 						</form>
-						<form action="<?= base_url('toko/keranjang/simpan') ?>" method="POST">
+						<!-- Kalo mau menambahkan ke keranjang -->
+						<form action="<?= base_url('toko/keranjang/tambah') ?>" method="POST">
 							<input type="hidden" name="id_produk" value="<?= $produk -> id_produk; ?>">
 							<input type="hidden" name="nama" value="<?= $produk -> nama; ?>">
 							<input type="hidden" name="harga" value="<?= $produk -> harga; ?>">

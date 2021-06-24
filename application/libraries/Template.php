@@ -1,5 +1,4 @@
 <?php
-
 class Template
 {
     public $template_data = array();

@@ -1,8 +1,9 @@
 <nav class="navbar navbar-light bg-dark py-4">
 	<div class="container-fluid">
 		<a class="navbar-brand fw-bold text-white mx-auto" href="<?=base_url();?>"><?=site_name?></a>
-		<form class="input-group ms-auto w-50">
-			<input type="text" class="form-control shadow-none border-white" placeholder="Forta Infinity Series 8">
+		<form action="<?= base_url('toko') ?>" method="POST" class="input-group ms-auto w-50">
+			<input type="text" name="cari" class="form-control shadow-none border-white text-black-50"
+				value="<?= set_value('cari', 'Forta Awaken Series 8') ?>">
 			<button class="btn bg-transparent border-white text-white" type="submit">
 				<i class="bi bi-search"></i>
 			</button>

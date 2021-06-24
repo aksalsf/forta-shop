@@ -55,4 +55,17 @@ $route['translate_uri_dashes'] = false;
 
 // Custom Route
 $route['toko/keranjang/(:any)'] = 'toko/$1_keranjang';
+
 $route['toko/proses/(:any)'] = 'toko/proses_$1';
+
+$route['admin/order/(:any)'] = 'admin/$1_order';
+$route['admin/order/(:any)/(:num)'] = 'admin/$1_order/$2';
+
+$route['admin/gudang/(:any)'] = 'admin/$1_gudang';
+$route['admin/gudang/(:any)/(:num)'] = 'admin/$1_gudang/$2';
+
+$route['admin/brand/(:any)'] = 'admin/$1_brand';
+$route['admin/brand/(:any)/(:num)'] = 'admin/$1_brand/$2';
+
+$route['admin/pelanggan/(:any)'] = 'admin/$1_pelanggan';
+$route['admin/pelanggan/(:any)/(:num)'] = 'admin/$1_pelanggan/$2';

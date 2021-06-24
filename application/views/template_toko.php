@@ -7,9 +7,7 @@
 $this->load->view('template/header');
 
 // Notifikasi
-if ($this->session->flashdata('notifikasi')) {
-	$this->load->view('template/notifikasi');
-}
+if ($this->session->flashdata('notifikasi')) $this->load->view('template/notifikasi');
 
 ?>
 

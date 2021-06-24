@@ -2,7 +2,17 @@
 	<div class="d-flex align-items-center">
 		<h1 class="fs-6 mb-0 me-auto">Katalog</h1>
 		<?php foreach($brandCollection as $brand): ?>
-		<a href="#" class="btn btn-sm px-3 btn-primary rounded-pill ms-2"><?= $brand -> nama ?></a>
+		<?= form_open('toko') ?>
+		<?= form_button(
+			[
+				'name' => 'cari',
+				'value' => $brand -> nama,
+				'class' => 'btn btn-sm px-3 btn-primary rounded-pill ms-2',
+				'type' => 'submit',
+				'content' => $brand -> nama
+			]
+		) ?>
+		<?= form_close() ?>
 		<?php endforeach; ?>
 	</div>
 	<hr>
